@@ -21,9 +21,8 @@
     [:div {:style {:display :flex}}
      [:label {:style {:flex "1 0" :margin-left "5px" :margin-right "5px"}}
       title]
-     [:input {:style (if (and (not disabled) (not valid))
-                      {:background-color :red}
-                      {})
+     [:input {:style (when (and (not disabled) (not valid))
+                      {:background-color :red})
              :type :text
              :required true
              :disabled disabled
